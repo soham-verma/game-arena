@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- icon -->
+  <link rel="shortcut icon" href="../../img/icon.jpg" type="image/x-icon">
+	<title> Number Guessing Game | Game Arena </title>
+	<style>
+    img[alt="www.000webhost.com"] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);">
+		<div class="container">
+				<a class="navbar-brand" href="../../">
+						<img src="../../img/icon.jpg" width="30" height="30" class="d-inline-block align-top" oncontextmenu="return false;" alt="">
+						Game Arena
+					</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+								<a class="nav-item nav-link active" href="../../">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="../../#about">About</a>
+								<a class="nav-item nav-link" href="../../#games">Games</a>
+								<a class="nav-item nav-link" href="../../#contact">Contact</a>
+						</div>
+				</div>
+		</div>
+	</nav>
+	<!-- .navbar -->
+
+	<div class="container mt-5 pt-4">
+		<h1>Guess The Number</h1>
+		<p>We have selected a random number between 1 - 10.
+			See if you can guess it.</p>
+		<div class="form">
+			<label for="guessField">Enter a guess: </label>
+			<input type="text" id="guessField" class="guessField">
+			<input type="submit" value="Submit guess" class="btn btn-primary" id="submitguess">
+			<button class="btn btn-primary" onclick="location.reload();">Refresh Page</button>
+		</div>
+		<script type="text/javascript">
+			var y = Math.floor(Math.random() * 10 + 1);
+			var guess = 1;
+			document.getElementById("submitguess").onclick = function () {
+				var x = document.getElementById("guessField").value;
+				if (x == y) {
+					alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+						+ guess + " GUESS ");
+				}
+				else if (x > y) {
+					guess++;
+					alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+				}
+				else {
+					guess++;
+					alert("OOPS SORRY!! TRY A GREATER NUMBER")
+				}
+			}
+		</script>
+	</div>
+
+	<!-- scripts -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
