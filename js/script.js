@@ -73,10 +73,10 @@ var speak_img = document.getElementById('volume-img');
 speaker.addEventListener('click', function() {
   video.muted = !video.muted;
   if (video.muted == true) {
-    speak_img.setAttribute('src', '/img/mute.png');
+    speak_img.setAttribute('src', 'img/mute.png');
   }
   else if(video.muted == false) {
-    speak_img.setAttribute('src', '/img/speaker.png');
+    speak_img.setAttribute('src', 'img/speaker.png');
   }
   
 })
